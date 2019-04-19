@@ -1,0 +1,12 @@
+$(function(){
+    $(".dropdown").click(function(){
+        $(".dropicon").toggleClass("on");
+        $(".dropcontent").toggleClass("drop-it");
+        $(".closebutton").toggleClass("closable");
+    });
+    $(".closebutton").click(function(){
+        $(".dropcontent").toggleClass("drop-it");
+        $(".closebutton").toggleClass("closable");
+        $(".dropicon").toggleClass("on");
+    })
+});

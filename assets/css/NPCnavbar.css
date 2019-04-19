@@ -1,0 +1,269 @@
+.navbarcontainer {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  z-index: 11;
+}
+
+.npcnav {
+  width: 100%;
+  height: 60px;
+  background: rgba(0,0,0,0.16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Quicksand';
+  transition-duration: 0.3s !important;
+}
+
+.npcnav:hover {
+  height: 70px !important;
+  background: rgba(0,0,0,0.51) !important;
+}
+
+.brandbox {
+  /*background: rgb(255,148,148);*/
+  height: 100%;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brandbox:hover .adapt {
+  opacity: 0;
+}
+
+.brandbox:hover .color {
+  opacity: 1;
+}
+
+.logobox {
+  display: flex;
+  height: 100%;
+  width: 60px;
+  /*background: red;*/
+  align-items: center;
+}
+
+.logo {
+  transition-duration: 0.2s;
+}
+
+.logo.adapt {
+  height: 60px;
+  width: 60px;
+  background: url('local icons/NPC_MAINLOGO_white.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute !important;
+}
+
+.logo.color {
+  height: 60px;
+  width: 60px;
+  background: url('local icons/NPC_MAINLOGO.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute !important;
+  opacity: 0;
+}
+
+.brandtext {
+  height: 50px;
+}
+
+.buttonstuff {
+  display: flex;
+  margin-right: 1rem;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ticketgo {
+  color: white;
+  padding: 10px;
+  border: solid 2px rgba(255,255,255,0.5);
+  border-radius: 3rem;
+  transition-duration: 0.2s;
+}
+
+.ticketgo:hover {
+  background: white;
+  color: rgb(27,27,27);
+}
+
+@media (max-width: 576px) {
+  .ticketlink, .ticketgo {
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    margin: -1rem;
+  }
+}
+
+.collapsebutton {
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  .collapsebutton, .navbutton {
+    visibility: collapse;
+    position: absolute;
+    width: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .dropdown {
+    visibility: hidden;
+  }
+}
+
+.navbutton {
+  margin-right: 1rem;
+  color: white;
+  padding: 3px 3px;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+}
+
+.navbutton:hover {
+  background: white;
+  color: rgb(61,61,61);
+  padding: 3px 5px;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*margin-right: 0.5rem;*/
+  user-select: none;
+  height: 50px;
+  width: 40px;
+}
+
+.drophover {
+  display: flex;
+  align-items: center;
+}
+
+.material-icons.dropicon {
+  color: white;
+  transition-duration: 0.2s;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.dropdown:active .dropicon {
+  color: rgb(54,54,54) !important;
+  background: white !important;
+  border-radius: 5px;
+}
+
+.on {
+  color: rgb(54,54,54) !important;
+  background: white !important;
+  border-radius: 5px;
+}
+
+.dropcontent {
+  /*width: 270px;*/
+  /*position: absolute;*/
+  right: 0;
+  background: rgba(255,255,255,0.94);
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  box-shadow: rgba(0,0,0,0.25) 0 0 12px;
+  height: 0;
+}
+
+.drop-it {
+  height: 360px;
+}
+
+.dropbuttontitle {
+  color: rgb(63,63,63);
+  /*margin-right: 10px;*/
+  text-align: center;
+  user-select: none;
+}
+
+.dropbutton {
+  display: flex;
+  text-align: end;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+  user-select: none;
+}
+
+.dropbutton.collapse-ticket {
+  background: rgb(255,189,61);
+  color: rgb(45,45,45);
+  font-weight: 700;
+}
+
+.dropbutton:hover {
+  background: rgb(227,227,227);
+}
+
+.dropbutton.collapse-ticket:hover {
+  background: rgb(255,230,182);
+}
+
+.closebutton {
+  /*background: rgba(0,0,0,0.27);*/
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+  height: 0;
+  overflow: hidden;
+  /*height: 95px;*/
+  color: white;
+  transition-duration: 0.2s;
+  opacity: 0;
+}
+
+.closebutton.closable {
+  height: 140px;
+  transition-duration: 0.5s;
+  opacity: 1;
+}
+
+.icon-circle {
+  padding: 5px;
+  border: solid 2px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-icons.closeicon {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+a:hover {
+  text-decoration: none;
+  color: initial;
+}
+
